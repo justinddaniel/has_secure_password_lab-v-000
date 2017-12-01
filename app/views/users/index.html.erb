@@ -1,0 +1,7 @@
+<h1> Welcome! Click on the link below to sign up! If you already have an account click Login. </h1><br>
+<a href="/users/new">Sign Up</a><br>
+<a href="sessions/new">Login</a>
+
+<% if session[:user_id] %>
+  <h3> Hi <%= @user.name %>, you are now logged in. </h3>
+<% end %>
