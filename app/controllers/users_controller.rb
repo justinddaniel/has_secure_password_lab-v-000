@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    binding.pry
     @user = User.new(user_params).save
     return redirect_to controller: 'users', action: 'new' unless @user
     session[:user_id] = @user.id
